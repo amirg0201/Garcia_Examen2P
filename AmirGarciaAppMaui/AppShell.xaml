@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="AmirGarciaAppMaui.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:views="clr-namespace:AmirGarciaAppMaui.Views"
+    Shell.FlyoutBehavior="Disabled"
+    Title="NOTES">
+
+    <TabBar>
+        <ShellContent
+            Title="Notes"
+            ContentTemplate="{DataTemplate views:AgAllNotesPage}"
+            Icon="{OnPlatform 'agicon_notes.png', iOS='agicon_notes_ios.png', MacCatalyst='agicon_notes_ios.png'}" />
+
+        <ShellContent
+            Title="About"
+            ContentTemplate="{DataTemplate views:AGAboutPage}"
+            Icon="{OnPlatform 'agicon_about.png', iOS='agicon_about_ios.png', MacCatalyst='agicon_about_ios.png'}" />
+    </TabBar>
+
+</Shell>
